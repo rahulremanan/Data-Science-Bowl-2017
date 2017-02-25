@@ -37,7 +37,7 @@ def train_xgboost():
                                seed=1984)
 
         model.fit(trn_x, trn_y, eval_set=[(val_x, val_y)], verbose=True, eval_metric='logloss', early_stopping_rounds=45)
-        model.append(clf)
+        model.append(model)
 
     return models
 
